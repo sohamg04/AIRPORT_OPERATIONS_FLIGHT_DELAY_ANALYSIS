@@ -2,28 +2,29 @@
 
 ## Project Overview
 
-An end to end data analytics project focused on analyzing flight operations delays cancellations and airport performance using Python Pandas SQL and Power BI.
+An end to end data analytics project focused on analyzing flight operations delays cancellations airline performance and airport activity using Python Pandas SQL and Power BI.
 
 ## Business Problem
 
-Flight delays and cancellations can affect airport operations and passenger experience. This project analyzes flight data to identify delay patterns operational trends and airport level performance.
+Flight delays and cancellations can affect airline operations and passenger experience. This project analyzes flight data to identify delay patterns major delay causes airline performance and operational trends.
 
 ## Dataset
 
 The project uses flight operations data containing information related to:
 
 - Flight schedules
-- Departure and arrival delays
+- Departure delays
+- Arrival delays
 - Cancellation details
-- Airline information
-- Airport information
+- Airlines
+- Airports
 - Delay causes
 
 The working dataset contains 10000 flight records across 31 attributes.
 
 ## Data Cleaning
 
-The data was cleaned and prepared for analysis using Python and Pandas.
+The data was prepared using Python and Pandas.
 
 Key steps included:
 
@@ -33,14 +34,15 @@ Key steps included:
 - Creating delay severity categories
 - Preparing the cleaned dataset for Power BI analysis
 
-## Delay Classification
-
-Flights were classified using departure delay values.
+## Delay Analysis
 
 The analysis identified:
 
-- 6248 flights as not delayed
-- 3752 flights as delayed
+- 10000 total flights
+- 3752 delayed flights
+- 37.52% delay rate
+- 392 cancelled flights
+- 7.35 average departure delay
 
 Delayed flights were further categorized into:
 
@@ -48,41 +50,41 @@ Delayed flights were further categorized into:
 - Moderate
 - Severe
 
-The analysis identified:
-
-- 2173 minor delays
-- 1198 moderate delays
-- 381 severe delays
-
-## Cancellation Analysis
-
-The project also analyzed flight cancellations and cancellation reasons.
-
-Total cancellations identified:
-
-- 392 cancelled flights
-- 9608 non cancelled flights
-
 ## Power BI Dashboard
 
-An interactive Power BI dashboard was developed to analyze flight operations and delay patterns.
+An interactive Power BI dashboard was developed to analyze flight operations and delay performance.
 
-Key dashboard analysis includes:
+### Dashboard KPIs
 
-- Total Flights by Destination Airport
-- Delay Rate by Destination Airport
-- Delay Rate by Day of Week
-- Flight Delay Analysis
-- Cancellation Analysis
-- Airport Performance
+- Total Flights
+- Delayed Flights
+- Delay Rate
+- Cancelled Flights
+- Average Departure Delay
 
-## Key Insights
+### Dashboard Visuals
 
-- 3752 of the 10000 analyzed flights were classified as delayed
-- Delay severity analysis showed differences between minor moderate and severe delays
-- Destination airports were compared based on flight volume and delay rate
-- Day of week analysis was used to identify variations in delay rates
-- Flight cancellations were analyzed using cancellation status and reason
+- Delay Rate by Airline
+- Total Delay Minutes by Cause
+- Top 10 Airlines by Total Delay
+- Total Flights by Origin Airport
+- Delay Rate by Time Period
+- Delay Rate by Route
+
+## Key Analysis
+
+The dashboard allows analysis of:
+
+- Airline level delay performance
+- Major causes of flight delays
+- Airlines with the highest total delay minutes
+- Flight volume across origin airports
+- Delay rates across different time periods
+- Route level delay performance
+
+## Dashboard Preview
+
+![Airport Operations & Flight Delay Analytics](airport-delay-dashboard.png)
 
 ## Technologies Used
 
@@ -102,4 +104,5 @@ airport-operations-flight-delay-analytics
 ├── airports.csv
 ├── flights-compressed.csv
 ├── flights_clean_powerbi.csv
+├── airport-delay-dashboard.png
 └── README.md
